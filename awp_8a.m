@@ -1,0 +1,18 @@
+clc;
+clear;
+close all;
+fs=10000;
+t=0:1/fs:0.01;
+signal=sin(2*pi*1000*t);
+emi=0.5*sin(2*pi*2500*t);
+received=signal+emi;
+figure;
+subplot(3,1,1);
+plot(t,signal);
+title('Desired Signal');
+subplot(3,1,2);
+plot(t,emi);
+title('EMI Signal');
+subplot(3,1,3);
+plot(t,received);
+title('Received Signal with EMI');
